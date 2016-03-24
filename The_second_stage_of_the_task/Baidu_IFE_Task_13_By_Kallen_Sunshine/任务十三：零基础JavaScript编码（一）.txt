@@ -1,0 +1,50 @@
+		/*下面这个写法是-匿名函数自执行*/
+		(function() {
+		})();
+
+给id=1233 添加执行一个onclick事件
+
+		保存在↓变量  document对象         这个是document的方法          参数不存在返回bull↓
+		var btn1 =    document.      getElementByid('1233');     接受 id 为1233 的元素 的参数
+		btn1.onclick = function () {}     使用函数表达式创建函数，也就是匿名函数(拉姆达函数)-function没有标识符，
+              ↑函数体                				另外一种是叫做"函数声明"，但是会有函数声明提升。
+
+
+给id=1233 绑定了一个onclick事件
+
+	在JavaScript中事件绑定使用 attachEvent，但是这是IE浏览器使用的，而谷歌和火狐以及其它浏览器不支持，他们使用 addEventListener。实现浏览器兼容的方法最常用的的就是 if 条件句判断了。那么搞清楚这两个方法的使用方法就不难了写出JavaScript代码了。
+
+ddEventListener()含有三个参数，一个是事件名称，另一个是事件执行的函数，最后一个是事件捕获，
+																					↑因为不是IE，所以不是事件冒泡、
+obj.addEventListener("click",function(){},true/false);
+
+绑定事件与执行事件的区别就是，执行只能运行一次，然而绑定了的事件可以无限调用。
+
+
+var dom = {
+		btn: document.getElementById('button'),
+		aqi: document.getElementById('aqi-input'),
+		label: document.getElementById('aqi-display')
+};
+	dom.btn.onclick = function(){
+		var val = dom.aqi.value;
+		if(val.length > 0){
+			dom.label.innerHTML = val
+		}else{
+			alert('请输入北京今天空气质量！')
+		}
+	};
+		上方这个命名方式是为了避免在JavaScript中全局变量引起的命名冲突，有时侯重写变量也不能按照想像中的顺序来，因为函数声明提升。
+
+输出的时候代码使用的是 innerHTML 赋值，这可能存在安全隐患，比如输入 <img src=x onerror=alert(1) /> 后提交会执行脚本。改成使用 textContent 可以避免这个问题（需要 IE 9+）
+
+
+
+
+
+
+
+
+
+
+
