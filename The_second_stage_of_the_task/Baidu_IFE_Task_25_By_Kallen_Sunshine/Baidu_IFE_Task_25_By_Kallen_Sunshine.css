@@ -1,0 +1,35 @@
+* {
+	padding:0px;
+	margin:0px;
+}
+html body {
+	width:100%;
+	height:100%;
+}
+.contain {
+	position:relative;
+	top:10px;
+	left:-150px;
+	width: 300px;
+	margin:0px 50%;
+	text-align:left;
+	border:#4caf50 thin solid;
+	overflow:hidden;
+}
+.contain div {
+	border-left:#4caf50 thin dashed;
+	margin-left:5px;
+	padding-left:10px;
+	width: 300px;
+}
+.BTNcenter {
+	width: 300px;
+	margin:0px auto;
+}
+#BTNtraver {
+	width:50px;
+	height:30px;
+	margin:0px 50%;
+	position:relative;
+	left:-25px;
+}
