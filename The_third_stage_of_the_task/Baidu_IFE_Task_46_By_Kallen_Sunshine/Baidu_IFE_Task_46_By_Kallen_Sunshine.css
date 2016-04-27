@@ -1,0 +1,24 @@
+*{
+	border:red thin solid;
+	padding:0px;
+	margin:0px;
+}
+
+html body {
+	width:100%;
+	height:100%
+}
+
+.MainDrawing{
+	width:500px;
+	height:600px;
+	position:relative;
+	z-index:10;
+}
+
+/*@media screen and (max-width:640px){
+	.MainDrawing{
+		width:100%;
+		height:100%;
+	}
+}*/
