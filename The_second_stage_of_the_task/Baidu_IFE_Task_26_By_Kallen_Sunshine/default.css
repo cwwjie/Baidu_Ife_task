@@ -1,0 +1,33 @@
+body{
+	width: 100%;
+	height: 100%;
+}
+.Screen {
+	position: relative;
+	background: #000;
+	width: 100%;
+	height:500px;
+}
+.Planet {
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	top: 160px;
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+	background: blue;
+}
+#spaceship_1{
+	width:20px;
+	height:20px;
+	background:red;
+	position:absolute;
+	left: 50%;
+	margin-left: -75px;
+	top: 160px;
+}
+.box {
+	border:1px red solid;
+	position:absolute;
+}
