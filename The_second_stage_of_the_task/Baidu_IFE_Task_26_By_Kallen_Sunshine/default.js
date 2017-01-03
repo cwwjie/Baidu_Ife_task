@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	// go();
 	zhenshi();
+	main();
 });
 function zhenshi() {
 	var airship = $("#spaceship_2");
@@ -132,7 +133,37 @@ function spaceship() {
 
 
 
-
+function main() {
+	// 先绘制背景
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext('2d');
+	ctx.fillStyle = "#000";
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
+	// 绘制星球
+	ctx.beginPath(); 
+	ctx.arc(canvas.width/2,canvas.height/2,50,0,Math.PI*2, true); 
+	ctx.fillStyle = "blue"; 
+	ctx.fill();
+	// 绘制飞船
+	ctx.strokeStyle = 'yellow';
+	ctx.strokeRect(canvas.width/2-20,canvas.height/2-10,40,20); 
+	ctx.fillText("文字1",200,32);
+	// 旋转
+	ctx.save();
+	ctx.translate(canvas.width/2,canvas.height/2);
+	ctx.strokeStyle = 'red';
+	ctx.rotate(20*Math.PI/180);	
+	ctx.fillText("↑",-10+80,-20);
+	ctx.strokeRect(-10+80,-20,20,40); 
+	ctx.restore();
+	ctx.fillText("文字3",200,29);
+	ctx.save();
+	ctx.translate(canvas.width/2,canvas.height/2);
+	ctx.font="12px Arial";
+	ctx.fillStyle = "red"; 
+	ctx.fillText("飞船一",80,40);
+	ctx.restore();
+}
 
 
 
