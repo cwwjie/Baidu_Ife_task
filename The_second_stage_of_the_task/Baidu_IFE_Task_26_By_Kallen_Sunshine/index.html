@@ -15,13 +15,15 @@
 	</div>
 	<div class="Console">
 		<h1>指挥中心</h1>
-		<div class="BTN">
-			对<span>1</span>飞船下达指令:
-			<button>开始飞行</button>
-			<button>停止飞行</button>
-			<button>销毁</button>
+		<div id="renderBTN">
+			<!-- <div class="BTN">
+				对<span>1</span>飞船下达指令:
+				<button onclick='signalTower.send(1,"start",event)'>开始飞行</button>
+				<button onclick='signalTower.send(1,"stop",event)'>停止飞行</button>
+				<button onclick='signalTower.send(1,"destroy",event)'>销毁</button>
+			</div> -->
 		</div>
-		<div class="Add"><button>增加新的飞船</button></div>
+		<div class="Add" id="Add"><button>增加新的飞船</button></div>
 	</div>
 </body>
 </html>
